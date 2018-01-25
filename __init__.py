@@ -22,6 +22,7 @@ class BitcoinPriceSkill(MycroftSkill):
         try:
             r = requests.get("http://apiv2.bitcoinaverage.com/indices/local/ticker/BTCUSD")
             self.speak_dialog("bitcoin.price", data={'price': str(r.json()['last'])})
+            self.
         except:
             self.speak_dialog("not.found")
 
